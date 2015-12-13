@@ -2,6 +2,7 @@
 
 class Session_Model extends Model {
     function __construct() {
+        parent::__construct();
     }
 
     function checkSession($session){
@@ -12,6 +13,10 @@ class Session_Model extends Model {
             $sessionToReturn = $val['session_id'];
         }
         return $sessionToReturn;
+    }
+
+    function test() {
+        echo "Hello";
     }
 }
 

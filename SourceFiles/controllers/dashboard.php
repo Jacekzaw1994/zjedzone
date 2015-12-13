@@ -15,7 +15,7 @@ class Dashboard extends Controller
         parent::__construct();
         //Session::init();
         $session = $_COOKIE['sessionId'];
-        if($this->model->checkSession($session) != $session) {
+        if($this->session->checkSession($session) != $session) {
             header("location: ../login");
         }
 

@@ -3,8 +3,8 @@
 class Controller {
 
     function __construct() {
-        //echo 'Main controller<br />';
         $this->view = new View();
+        $this->db = new Database();
         require_once( ROOT_DIR . '/models/session_model.php');
         $this->session = new Session_Model();
     }
