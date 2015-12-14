@@ -30,7 +30,7 @@ class Login_Model extends Model {
     public function saveSessionId($userId, $session){
         try{
 
-            $sth = $this->db->prepare("INSERT INTO users_sesions VALUES(null,$userId,$session)");
+            $sth = $this->db->prepare("INSERT INTO users_sesions VALUES(null,$userId,$session);");
             $sth->execute();
 
         }

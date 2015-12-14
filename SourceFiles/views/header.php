@@ -13,7 +13,6 @@
     <link href="<?php echo SITE_ROOT; ?>public/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<?php Session::init(); ?>
 <div id="header">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -30,14 +29,13 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="<?php echo SITE_ROOT; ?>index">Strona Główna</a></li>
                     <li><a href="<?php echo SITE_ROOT; ?>help">Pomoc</a></li>
-                    <!------------------------------------------------------>
-                    <!------------------------------------------------->
-                    <?php if (Session::get('loggedIn') == true):?>
-                        <li><a href="<?php echo SITE_ROOT; ?>dashboard/logout">Wyloguj</a></li>
+                    <?php if($this->user):  ?>
+                        <li><a href="<?php echo SITE_ROOT; ?>logout">Wyloguj</a></li>
                     <?php else: ?>
                         <li><a href="<?php echo SITE_ROOT; ?>login">Zaloguj</a></li>
-                    <?php endif; ?>
+                    <?php endif;?>
                     <li><a href="<?php echo SITE_ROOT; ?>register">Zarejestruj</a></li>
+                    <li><?php  ?></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

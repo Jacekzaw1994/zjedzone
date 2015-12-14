@@ -6,9 +6,8 @@
  * Time: 15:05
  */
 
-class View{
+class View {
     function __construct(){
-
     }
 
     public function render($name, $noInclude = false)
