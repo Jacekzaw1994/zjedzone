@@ -14,6 +14,7 @@
 <script src="<?php echo SITE_ROOT; ?>public/js/bootstrap.min.js"></script>
 <script src="<?php echo SITE_ROOT; ?>public/js/custom.js"></script>
 
+
 <?php
 if(isset($this->js))
 {

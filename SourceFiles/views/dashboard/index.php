@@ -7,7 +7,7 @@ Dashboard ... Logged in only ...
         <input type="submit">
     </form>
 
-
+    <a href="<?php echo SITE_ROOT; ?>login">Strona główna</a>
     <br />
 
     <div id="listInserts">

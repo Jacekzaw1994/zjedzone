@@ -13,10 +13,12 @@ class Dashboard extends Controller
     function __construct()
     {
         parent::__construct();
+        $this->view->someoneIsLoggedIn = 1;
         if($this->isLoggedIn()) {
+            $this->view->someoneIsLoggedIn = 0;
             header("location: login");
+            exit();
         }
-
         $this->view->js = array('dashboard/js/default.js');
     }
 

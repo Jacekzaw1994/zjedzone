@@ -7,7 +7,7 @@ $(function(){
 
         for (var i = 0; i < o.length; i++)
         {
-            $('#listInserts').append('<div>' + o[i].text + '<a href="#">X</a></div>');
+            $('#listInserts').append('<div>' + o[i].text + '<a class="del" href="#">X</a></div>');
         }
 
     }, 'json');
@@ -19,8 +19,13 @@ $(function(){
         var data = $(this).serialize();
 
         $.post(url, data, function(o) {
-            $('#listInserts').append('<div>' + o + '<a href="#">X</a></div>');
+            $('#listInserts').append('<div>' + o.text + '<a class="del" rel="'+ o.id + '" href="#">X</a></div>');
         });
+
+        return false;
+    });
+
+    $('.del').click(function() {
 
         return false;
     });

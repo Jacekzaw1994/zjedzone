@@ -11,6 +11,7 @@ class Dashboard_Model extends Model {
         $sth = $this->db->prepare('INSERT INTO data (text) VALUES (:text)');
         $sth->execute(array(':text' => $text));
 
+        $data = array('text' => $text, 'id' => $this->db->lastInsertId());
         echo json_encode($text);
     }
 
