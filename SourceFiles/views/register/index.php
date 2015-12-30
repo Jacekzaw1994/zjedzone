@@ -8,7 +8,7 @@
 
                     </div>
                     <div class="col-md-4">
-                        <form action="register/inputData" method="post">
+                        <form action="register/run" method="post">
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
                                 <input type="text" name="username" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
@@ -26,11 +26,11 @@
 
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input type="text" name="name" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+                                <input type="text" name="firstname" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-text-background"></i></span>
-                                <input type="text" name="surname" class="form-control" placeholder="Surname" aria-describedby="basic-addon1">
+                                <input type="text" name="lastname" class="form-control" placeholder="Surname" aria-describedby="basic-addon1">
                             </div>
 
                             <div class="input-group-btn center-block">

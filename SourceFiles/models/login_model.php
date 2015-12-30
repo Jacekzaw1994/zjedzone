@@ -11,7 +11,7 @@ class Login_Model extends Model {
             $sth = $this->db->prepare("call get_user(:login,:password);");
             $sth->execute(array(
                 ":login" => $login,
-                ":password" => hash('sha256', $password)
+                ":password" => Hash::create('sha256',$password ,HASH_PASSWORD_KEY)
             ));
             $id = -1;
             if ($sth->rowCount() > 0) {

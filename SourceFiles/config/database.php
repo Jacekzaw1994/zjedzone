@@ -5,3 +5,5 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'student_meals');
 define('DB_USER', 'root');
 define('DB_PASS', '');
+
+?>

@@ -12,14 +12,15 @@ class Register_Model extends Model {
         // $salt = rand(0,10000)
         // zapisz salt do bazy danych;
         // $pass = hash('sha256',$passwrod.$salt);
-        $password = hash('sha256',$password);
+        $password = Hash::create('sha256',$password ,HASH_PASSWORD_KEY);
 
-        $sth = $this->db->prepare("INSERT INTO users VALUES (NULL, :username, :password, :name, :surname, 666)");
+        $sth = $this->db->prepare("INSERT INTO users VALUES (NULL, :username, :password, :name, :surname, :salt)");
         $sth->execute(array(
             ':username' => $username,
             ':password' => $password,
             ':name' => $name,
-            ':surname' => $surname
+            ':surname' => $surname,
+            ':salt' => HASH_PASSWORD_KEY
         ));
 
     }

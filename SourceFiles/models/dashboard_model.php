@@ -12,7 +12,7 @@ class Dashboard_Model extends Model {
         $sth->execute(array(':text' => $text));
 
         $data = array('text' => $text, 'id' => $this->db->lastInsertId());
-        echo json_encode($text);
+        echo json_encode($data);
     }
 
     function xhrGetListings() {
@@ -21,5 +21,12 @@ class Dashboard_Model extends Model {
         $sth->execute();
         $data = $sth->fetchAll();
         echo json_encode($data);
+    }
+
+    function xhrDeleteListing()
+    {
+        $id = $_POST['id'];
+        $sth = $this->db->prepare('DELETE FROM data WHERE id = "'.$id.'"');
+        $sth->execute();
     }
 }

@@ -21,13 +21,6 @@
 </head>
 <body>
 <div id="header">
-    <?php if($this->someoneIsLoggedIn == 1){ ?>
-        <div>ZALOGOWANO!</div>
-    <?php }else{
-        ?>
-        <div>NIE ZALOGOWANO!</div>
-        <?php
-    } ?>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
