@@ -26,10 +26,10 @@ class Register extends Controller {
         $last_name = $_POST['lastname'];
 
         if($password === $r_password ){
+            echo "jestem tutaj";
             $this->model->createUser($login, $password, $first_name, $last_name );
-            header('location: ../login');
-        } else
-        {
+          //  header('location: ../login');
+        } else {
             echo "hasła są różne!";
         }
     }

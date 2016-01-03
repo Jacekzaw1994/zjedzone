@@ -1,13 +1,8 @@
 <?php
 
 //Config Paths
-require './config/paths.php';
+require './config.php';
 
-// Config Database
-require ROOT_DIR . '/config/database.php';
-require ROOT_DIR . '/config/constants.php';
-
-$app = new Bootstrap();
 
 // Use an autoloader!
 
@@ -17,16 +12,7 @@ function __autoload($class){
 }
 
 
-//require ROOT_DIR . '/libs/Bootstrap.php';
-//require ROOT_DIR . '/libs/Controller.php';
-//require ROOT_DIR . '/libs/Model.php';
-//require ROOT_DIR . '/libs/View.php';
-//
-//// Libraries
-//
-//require ROOT_DIR . '/libs/Database.php';
-//require ROOT_DIR . '/libs/Session.php';
-//require ROOT_DIR . '/libs/Hash.php';
+$app = new Bootstrap();
 
 
 
