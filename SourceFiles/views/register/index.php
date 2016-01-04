@@ -11,14 +11,16 @@
                         <form action="register/run" method="post">
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-                                <input type="text" name="username" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                                <input id="username" type="text" name="username" class="form-control login-registration" placeholder="Username" aria-describedby="basic-addon1">
                             </div>
-
+                            <p class="wrong-login">login za krotki lub zajety</p>
+                            <p class="login-correct" style="display: none;">login poprawny</p>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                                <input type="password" name="password" class="form-control password-registration" placeholder="Password" aria-describedby="basic-addon1">
                             </div>
-
+                            <p class="wrong-passwd">Hasło zbyt krótkie.</p>
+                            <p class="correct-passwd" style="display: none;">Hasło poprawne.</p>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
                                 <input type="password" name="repeatpass" class="form-control" placeholder="Repeat password" aria-describedby="basic-addon1">

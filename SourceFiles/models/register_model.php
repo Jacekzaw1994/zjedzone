@@ -26,7 +26,7 @@ class Register_Model extends Model {
         $sth = $this->db->prepare("INSERT INTO users VALUES (NULL, :username, :password, :name, :surname, :salt)");
         $sth->execute(array(
             ':username' => $username,
-           ':password' => $password,
+            ':password' => $password,
             ':name' => $name,
             ':surname' => $surname,
            ':salt' => HASH_PASSWORD_KEY
@@ -34,7 +34,14 @@ class Register_Model extends Model {
 
     }
 
-
+    public function isUserExist( $username ) {
+        $sth = $this->db->prepare("SELECT id FROM users WHERE username = :username");
+        $sth->execute(array(
+            ':username' => $username
+        ));
+        $results = $sth->fetchAll();
+        return count($results) > 0;
+    }
 }
 
 ?>
