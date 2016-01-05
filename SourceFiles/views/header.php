@@ -18,6 +18,7 @@
     <title>Zjedzone</title>
     <!-- Bootstrap -->
     <link href="<?php echo SITE_ROOT; ?>public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="header">
@@ -37,6 +38,7 @@
                     <li class="active"><a href="<?php echo SITE_ROOT; ?>index">Strona Główna</a></li>
                     <li><a href="<?php echo SITE_ROOT; ?>help">Pomoc</a></li>
                     <?php if($this->user):  ?>
+                        <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj Przepis</a></li>
                         <li><a href="<?php echo SITE_ROOT; ?>logout">Wyloguj</a></li>
                     <?php else: ?>
                         <li><a href="<?php echo SITE_ROOT; ?>login">Zaloguj</a></li>
@@ -55,6 +57,4 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+

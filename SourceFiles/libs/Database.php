@@ -40,23 +40,23 @@ class Database extends PDO
      * @param string $data An associative array
      * @param string $where the WHERE query part
      */
-    public function update($table, $data, $where)
-    {
-        ksort($data);
-
-        $fieldDetails = NULL;
-        foreach ($data as $key => $value) {
-            $fieldDetails .= "`$key`=:$key,";
-        }
-        $fieldDetails = rtrim($fieldDetails, ',');
-
-        $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE $where");
-
-        foreach ($data as $key => $value) {
-            $sth->bindValue(":$key", $value);
-        }
-
-        $sth->execute();
-    }
+//    public function update($table, $data, $where)
+//    {
+//        ksort($data);
+//
+//        $fieldDetails = NULL;
+//        foreach ($data as $key => $value) {
+//            $fieldDetails .= "`$key`=:$key,";
+//        }
+//        $fieldDetails = rtrim($fieldDetails, ',');
+//
+//        $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE $where");
+//
+//        foreach ($data as $key => $value) {
+//            $sth->bindValue(":$key", $value);
+//        }
+//
+//        $sth->execute();
+//    }
 
 }
