@@ -1,50 +1,57 @@
-
-<div class="container">
-    <div class="content">
+<!-- Features -->
+<div id="features-wrapper">
+    <section id="features" class="container">
+        <header>
+            <h2> <strong>Rejestracja</strong></h2>
+        </header>
         <div class="row">
-            <div class="col-md-12">
-                <div class="starter-template">
-                    <div class="col-md-4">
+            <div class="4u 12u(mobile)">
 
-                    </div>
-                    <div class="col-md-4">
-                        <form action="register/run" method="post">
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-                                <input id="username" type="text" required name="username" class="form-control login-registration" placeholder="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="4u 12u(mobile)">
+                    <!-- Feature -->
+                    <section>
+                        <form method="post" action="register/run">
+                            <div class="row 50%">
+                                <div class="12u 12u(mobile)">
+                                    <input class="login-registration" id="username" name="username" required placeholder="Login" type="text" />
+                                </div>
                             </div>
                             <p class="wrong-login">login za krotki lub zajety</p>
                             <p class="login-correct" style="display: none;">login poprawny</p>
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input type="password" required name="password" class="form-control password-registration" placeholder="Password" aria-describedby="basic-addon1">
+                            <div class="row 50%">
+                                <div class="12u 12u(mobile)">
+                                    <input class="password-registration" name="password" required placeholder="Hasło" type="password" />
+                                </div>
                             </div>
                             <p class="wrong-passwd">Hasło zbyt krótkie.</p>
                             <p class="correct-passwd" style="display: none;">Hasło poprawne.</p>
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-                                <input type="password" required name="repeatpass" class="form-control" placeholder="Repeat password" aria-describedby="basic-addon1">
+                            <div class="row 50%">
+                                <div class="12u 12u(mobile)">
+                                    <input name="repeatpass" required placeholder="Powrtórz hasło" type="password" />
+                                </div>
                             </div>
-
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input type="text" required name="firstname" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+                            <div class="row 50%">
+                                <div class="12u 12u(mobile)">
+                                    <input name="firstname" required placeholder="Imię" type="text" />
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-text-background"></i></span>
-                                <input type="text" required name="lastname" class="form-control" placeholder="Surname" aria-describedby="basic-addon1">
+                            <div class="row 50%">
+                                <div class="12u 12u(mobile)">
+                                    <input name="lastname" required placeholder="Nazwisko" type="text" />
+                                </div>
                             </div>
-
-                            <div class="input-group-btn center-block">
-                                <input type="submit" style="width: 50px; height: 20px;">
+                            <div class="row 50%">
+                                <div class="12u">
+                                    <button type="submit" href="#" class="form-button-submit button icon fa-envelope">ZAREJESTRUJ</button>
+                                </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="col-md-4">
+                    </section>
+            </div>
+            <div class="4u 12u(mobile)">
 
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-</div><!-- /.container -->
+    </section>
+</div>

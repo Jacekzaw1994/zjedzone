@@ -1,60 +1,76 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 <head>
+    <title>Zjedz.one</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="icon" href="#">
     <?php
     header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
     header("Cache-Control: post-check=0, pre-check=0", false);
     header("Pragma: no-cache");
     ?>
-
-    <link rel="icon" href="#">
-    <!-- Title -->
-    <title>Zjedzone</title>
-    <!-- Bootstrap -->
-    <link href="<?php echo SITE_ROOT; ?>public/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="<?php echo SITE_ROOT; ?>public/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/assets/css/ie8.css" /><![endif]-->
 </head>
-<body>
-<div id="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">ZJEDZ.ONE</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?php echo SITE_ROOT; ?>index">Strona Główna</a></li>
-                    <li><a href="<?php echo SITE_ROOT; ?>help">Pomoc</a></li>
-                    <?php if($this->user):  ?>
-                        <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj Przepis</a></li>
-                        <li><a href="<?php echo SITE_ROOT; ?>logout">Wyloguj</a></li>
-                    <?php else: ?>
-                        <li><a href="<?php echo SITE_ROOT; ?>login">Zaloguj</a></li>
+<body class="homepage">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+        <div id="header" class="container">
+
+            <!-- Logo -->
+            <h1 id="logo"><a href="<?php echo SITE_ROOT; ?>index">ZJEDZ.ONE </a></h1>
+            <p>Witaj głodomorze! Nie wiesz co zjeść? Pomożemy Ci coś opierdolić na szybko.</p>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a class="icon fa-home" href="<?php echo SITE_ROOT; ?>index"><span>Strona główna</span></a></li>
+                    <li><a class="icon fa-cog" href="<?php echo SITE_ROOT; ?>help"><span>Pomoc</span></a></li>
+                    <li><a class="icon fa-retweet" href="<?php echo SITE_ROOT; ?>add_recipe"><span>Dodaj przepis</span></a></li>
+                    <?php if(!($this->user)):  ?>
+                    <li><a class="icon fa-sitemap" href="<?php echo SITE_ROOT; ?>login"><span>Zaloguj</span></a></li>
+                    <li><a class="icon fa-user" href="<?php echo SITE_ROOT; ?>register"><span>Zarejestruj</span></a> </li>
+                        <?php else:?>
+                    <li>
+                        <a href="#" class="icon fa-user"><span><?php echo $this->user['username'];?></span></a>
+                        <ul>
+                            <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj przepis</a></li>
+                            <li><a href="#">Moje przepisy</a></li>
+                            <li><a href="#">Zmień awatar</a></li>
+                            <li>
+                                <a href="#">Phasellus consequat</a>
+                                <ul>
+                                    <li><a href="#">Magna phasellus</a></li>
+                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                    <li><a href="#">Phasellus consequat</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Zmień hasło</a></li>
+                            <li><a href="<?php echo SITE_ROOT; ?>logout">Wyloguj się</a></li>
+                        </ul>
+                    </li>
                     <?php endif;?>
-                    <li><a href="<?php echo SITE_ROOT; ?>register">Zarejestruj</a></li>
-                    <li><?php  ?></li>
                 </ul>
-            </div><!--/.nav-collapse -->
+            </nav>
+
         </div>
-    </nav>
-</div>
+    </div>
 
-<!-- This will be remove -->
 
-<br>
-<br>
-<br>
-<br>
+
+
+
 

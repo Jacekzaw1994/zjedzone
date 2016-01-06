@@ -13,7 +13,6 @@ class Login extends Controller
 
     function index()
     {
-        echo Hash::create('sha256','jacekplacek',HASH_PASSWORD_KEY);
         $this->view->render('login/index');
     }
 

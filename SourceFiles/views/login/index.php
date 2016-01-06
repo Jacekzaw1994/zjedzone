@@ -1,41 +1,45 @@
-
-<div class="container">
-    <div class="content">
+<!-- Features -->
+<div id="features-wrapper">
+    <section id="features" class="container">
+        <header>
+            <h2>Zaloguj się aby mieć <strong>Więcej opcji</strong>!</h2>
+        </header>
         <div class="row">
-            <div class="col-md-12">
-                <div class="starter-template">
-                    <div class="col-md-4">
+            <div class="4u 12u(mobile)">
 
-                    </div>
-                    <?php if($this->someoneIsLoggedIn == 1){ ?>
-                        <div>ZALOGOWANO</div>
-                    <?php }else{
-                        ?>
-                        <div class="col-md-4">
-                            <form  action="login/run" method="post">
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input type="text" name="username" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                                </div>
-
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                                </div>
-
-                                <div class="input-group-btn center-block">
-                                    <input type="submit" value="do it" style="width: 50px; height: 25px;">
-                                </div>
-                            </form>
+            </div>
+            <div class="4u 12u(mobile)">
+                <?php if($this->someoneIsLoggedIn == 1){ ?>
+                    <div>ZALOGOWANO</div>
+                <?php }else{
+                ?>
+                <!-- Feature -->
+                <section>
+                    <form method="post" action="login/run">
+                        <div class="row 50%">
+                            <div class="12u 12u(mobile)">
+                                <input name="username" placeholder="Login" type="text" />
+                            </div>
                         </div>
-                    <?php
-                    } ?>
+                        <div class="row 50%">
+                            <div class="12u 12u(mobile)">
+                                <input name="password" placeholder="Hasło" type="password" />
+                            </div>
+                        </div>
+                        <div class="row 50%">
+                            <div class="12u">
+                                <button type="submit" href="#" class="form-button-submit button icon fa-envelope">ZALOGUJ</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <?php
+                } ?>
 
-                    <div class="col-md-4">
+            </div>
+            <div class="4u 12u(mobile)">
 
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-</div><!-- /.container -->
+    </section>
+</div>
