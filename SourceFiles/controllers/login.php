@@ -18,9 +18,9 @@ class Login extends Controller
 
     function run()
     {
-        $login = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
-        $userId = $this->model->getUser($login, $password);
+        $userId = $this->model->getUser($email, $password);
         // pobierz z DB salt i $password = hash(sha512, $password.pobrana z bazy danych salt) i to jest Twoje haslo ktore porownujesz
         if($userId >= 0){
             $random = rand(0,100000);

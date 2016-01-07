@@ -19,6 +19,5 @@ class Help extends Controller {
 
         require ROOT_DIR . '/models/help_model.php';
         $model = new Help_Model();
-        $this->view->blah = $model->blah();
     }
 }

@@ -6,11 +6,11 @@ class Login_Model extends Model {
         parent::__construct();
     }
 
-    public function getUser($login, $password){
+    public function getUser($email, $password){
         try {
-            $sth = $this->db->prepare("call get_user(:login,:password);");
+            $sth = $this->db->prepare("call get_user(:email,:password);");
             $sth->execute(array(
-                ":login" => $login,
+                ":email" => $email,
                 ":password" => Hash::create('sha256',$password ,HASH_PASSWORD_KEY)
             ));
             $id = -1;

@@ -7,7 +7,7 @@ class Register_Model extends Model {
         parent::__construct();
     }
 
-    public function createUser( $username, $password, $name, $surname) {
+    public function createUser( $email, $username, $password, $name, $surname) {
         //password juz ma byc zakodowane w javascript i potem:
         // $salt = rand(0,10000)
         // zapisz salt do bazy danych;
@@ -23,21 +23,22 @@ class Register_Model extends Model {
 //            'salt' => HASH_PASSWORD_KEY
 //        ));
 
-        $sth = $this->db->prepare("INSERT INTO users VALUES (NULL, :username, :password, :name, :surname, :salt)");
+        $sth = $this->db->prepare("INSERT INTO users VALUES (NULL, :email, :username, :password, :name, :surname, :salt)");
         $sth->execute(array(
+            ':email' => $email,
             ':username' => $username,
             ':password' => $password,
             ':name' => $name,
             ':surname' => $surname,
-           ':salt' => HASH_PASSWORD_KEY
+            ':salt' => HASH_PASSWORD_KEY
         ));
 
     }
 
-    public function isUserExist( $username ) {
-        $sth = $this->db->prepare("SELECT id FROM users WHERE username = :username");
+    public function isUserExist( $email ) {
+        $sth = $this->db->prepare("SELECT id FROM users WHERE email = :email");
         $sth->execute(array(
-            ':username' => $username
+            ':email' => $email
         ));
         $results = $sth->fetchAll();
         return count($results) > 0;

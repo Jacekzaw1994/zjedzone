@@ -45,7 +45,7 @@
                     <li><a class="icon fa-user" href="<?php echo SITE_ROOT; ?>register"><span>Zarejestruj</span></a> </li>
                         <?php else:?>
                     <li>
-                        <a href="#" class="icon fa-user"><span><?php echo $this->user['username'];?></span></a>
+                        <a href="#" class="icon fa-user"><img src="http://www.gravatar.com/avatar/<?php echo md5($this->user['email']);?>?s=30&d=mm"><span><?php echo $this->user['username'];?></span></a>
                         <ul>
                             <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj przepis</a></li>
                             <li><a href="#">Moje przepisy</a></li>

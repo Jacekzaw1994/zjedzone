@@ -14,17 +14,22 @@
                         <form method="post" action="register/run">
                             <div class="row 50%">
                                 <div class="12u 12u(mobile)">
-                                    <input class="login-registration" id="username" name="username" required placeholder="Login" type="text" />
+                                    <input class="email-registration" id="email" name="email" required placeholder="E-mail" type="text" />
                                 </div>
                             </div>
-                            <p class="wrong-login">login za krotki lub zajety</p>
-                            <p class="login-correct" style="display: none;">login poprawny</p>
+                            <p class="wrong-email" style="display: none;">email zajety</p>
+                            <p class="email-correct" style="display: none;">email poprawny</p>
+                            <div class="row 50%">
+                                <div class="12u 12u(mobile)">
+                                    <input class="login-registration" id="username" name="username" required placeholder="Nick" type="text" />
+                                </div>
+                            </div>
                             <div class="row 50%">
                                 <div class="12u 12u(mobile)">
                                     <input class="password-registration" name="password" required placeholder="Hasło" type="password" />
                                 </div>
                             </div>
-                            <p class="wrong-passwd">Hasło zbyt krótkie.</p>
+                            <p class="wrong-passwd" style="display: none;">Hasło zbyt krótkie.</p>
                             <p class="correct-passwd" style="display: none;">Hasło poprawne.</p>
                             <div class="row 50%">
                                 <div class="12u 12u(mobile)">

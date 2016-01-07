@@ -19,6 +19,7 @@ class Register extends Controller {
 
 
     function run() {
+        $email = $_POST['email'];
         $login = $_POST['username'];
         $password = $_POST['password'];
         $r_password = $_POST['repeatpass'];
@@ -26,17 +27,19 @@ class Register extends Controller {
         $last_name = $_POST['lastname'];
 
         if($password === $r_password ){
-            $this->model->createUser($login, $password, $first_name, $last_name );
+            $this->model->createUser($email, $login, $password, $first_name, $last_name );
             header('location: ../login');
+            exit;
         } else {
             echo "hasła są różne!";
         }
     }
 
-    function checkLogin() {
-        $login = $_POST['username'];
-        $is_login_free = $this->model->isUserExist($login);
+    function checkEmail() {
+        $email = $_POST['email'];
+        $is_email_free = $this->model->isUserExist($email);
         header('Content-Type: application/json');
-        echo json_encode(array('isUserExist' => $is_login_free));
+        echo json_encode(array('isUserExist' => $is_email_free));
+        exit;
     }
 }

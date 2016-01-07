@@ -2,20 +2,20 @@
  * Created by Jacek on 2016-01-04.
  */
 $(document).ready(function(){
-    $('.login-registration').keydown(function() {
-        if ($('.login-registration').val().length < 3) {
-            $('.login-correct').hide();
-            $('.wrong-login').show();
+    $('.email-registration').keydown(function() {
+        if ($('.email-registration').val().length < 3) {
+            $('.email-correct').hide();
+            $('.wrong-email').show();
         } else {
             // using ajax
-            $('.wrong-login').hide();
+            $('.wrong-email').hide();
             $.ajax({
                 method: "POST",
-                url: "register/checkLogin",
-                data: {username: $('#username').val()}
+                url: "register/checkEmail",
+                data: {email: $('#email').val()}
             })
                 .done(function() {
-                    $('.login-correct').show();
+                    $('.email-correct').show();
                 });
 
             //$.getJSON('register/checkLogin', {username: $('#username').val()}, function () {

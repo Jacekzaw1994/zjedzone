@@ -18,7 +18,7 @@
                     <form method="post" action="login/run">
                         <div class="row 50%">
                             <div class="12u 12u(mobile)">
-                                <input name="username" placeholder="Login" type="text" />
+                                <input name="email" placeholder="E-mail" type="text" />
                             </div>
                         </div>
                         <div class="row 50%">

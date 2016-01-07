@@ -1,14 +1,21 @@
-
-<div class="container">
-    <div class="content">
+<!-- Features -->
+<div id="features-wrapper">
+    <section id="features" class="container">
+        <header>
+            <h2>POMOC</h2>
+        </header>
         <div class="row">
-            <div class="col-md-12">
-                <div class="starter-template">
-                    <h1>Help</h1>
-                </div>
+            <div class="4u 12u(mobile)">
+
+            </div>
+            <div class="4u 12u(mobile)">
+
+            </div>
+            <div class="4u 12u(mobile)">
+
             </div>
         </div>
-    </div>
-</div><!-- /.container -->
+    </section>
+</div>
 
 
