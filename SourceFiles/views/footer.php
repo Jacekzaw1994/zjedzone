@@ -73,7 +73,7 @@
     </div>
     <div id="copyright" class="container">
         <ul class="links">
-            <li>&copy; Untitled. All rights reserved.</li>
+            <li>&copy; Zjedz.one. Wszelkie prawa zastrzeżone.</li>
         </ul>
     </div>
 </div>

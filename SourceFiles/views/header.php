@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="<?php echo SITE_ROOT; ?>public/assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/assets/css/main.css" />
+    <link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/css/custom.css">
     <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/assets/css/ie8.css" /><![endif]-->
 </head>
 <body class="homepage">
@@ -45,7 +46,7 @@
                     <li><a class="icon fa-user" href="<?php echo SITE_ROOT; ?>register"><span>Zarejestruj</span></a> </li>
                         <?php else:?>
                     <li>
-                        <a href="#" class="icon fa-user"><img src="http://www.gravatar.com/avatar/<?php echo md5($this->user['email']);?>?s=30&d=mm"><span><?php echo $this->user['username'];?></span></a>
+                        <a><img class="avatar-image" src="http://www.gravatar.com/avatar/<?php echo md5($this->user['email']);?>?s=30&d=retro"><span><strong><?php echo $this->user['username'];?></strong></span></a>
                         <ul>
                             <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj przepis</a></li>
                             <li><a href="#">Moje przepisy</a></li>
@@ -58,7 +59,7 @@
                                     <li><a href="#">Phasellus consequat</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Zmień hasło</a></li>
+                            <li><a href="<?php echo SITE_ROOT; ?>new_password">Zmień hasło</a></li>
                             <li><a href="<?php echo SITE_ROOT; ?>logout">Wyloguj się</a></li>
                         </ul>
                     </li>
