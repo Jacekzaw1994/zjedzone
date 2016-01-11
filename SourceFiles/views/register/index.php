@@ -14,7 +14,7 @@
                         <form method="post" action="register/run">
                             <div class="row 50%">
                                 <div class="12u 12u(mobile)">
-                                    <input class="email-registration" id="email" name="email" required placeholder="E-mail" type="text" />
+                                    <input class="email-registration" id="email" name="email" required placeholder="E-mail" type="email" />
                                 </div>
                             </div>
                             <p class="wrong-email" style="display: none;">email zajety</p>

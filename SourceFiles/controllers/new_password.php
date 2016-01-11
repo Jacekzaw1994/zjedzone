@@ -16,11 +16,16 @@ class New_Password extends Controller {
         $current_passwd = $_POST['currentpasswd'];
         $new_passwd = $_POST['newpasswd'];
         $r_new_passwd = $_POST['repeatnewpasswd'];
-
-        if($new_passwd === $r_new_passwd ){
-            $this->model->changePassword($new_passwd );
+        $current_passwd = Hash::create('sha256',$current_passwd ,HASH_PASSWORD_KEY);
+        $user_email = $this->view->user['email'];
+        if($current_passwd === $this->view->user['password']) {
+            if ($new_passwd === $r_new_passwd) {
+                $this->model->changePassword($new_passwd, $user_email);
+            } else {
+                echo "hasła są różne!";
+            }
         } else {
-            echo "hasła są różne!";
+            echo "wprowadzono nieprawidłowe hasło";
         }
     }
 }

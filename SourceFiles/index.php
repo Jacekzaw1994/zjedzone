@@ -13,6 +13,3 @@ function __autoload($class){
 
 
 $app = new Bootstrap();
-
-
-

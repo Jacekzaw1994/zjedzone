@@ -18,8 +18,11 @@ class Add_Recipe extends Controller {
         $level = $_POST['level'];
         $recipe = $_POST['recipe'];
 
+        var_dump($_POST);
+
         $this->model->createRecipe($category, $name, $time, $level, $recipe, $this->view->user );
-        echo "dodalo sie";
+
+        header('location: ../recipe');
 
     }
 }
