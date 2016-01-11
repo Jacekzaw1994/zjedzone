@@ -17,6 +17,23 @@ class Add_Recipe extends Controller {
         $time = $_POST['time'];
         $level = $_POST['level'];
         $recipe = $_POST['recipe'];
+        $ingredients = $_POST['ingredients'];
+        $user_id = $this->view->user["id"];
+
+        $sth->$this->db->prepare("call save_recipe(:category,:name, :description, :short_description, :time, :level, :user_id);");
+        $sth->execute(array(
+            ":category" => $category,
+            ":name" => $name,
+            ":description" => $recipe,
+            ":short_description" => $recipe,
+            ":time" => $time,
+            ":level" => $level,
+            ":user_id" => $user_id
+        ));
+
+        foreach($ingredients as $value1){
+
+        }
 
         var_dump($_POST);
 
