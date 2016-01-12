@@ -10,6 +10,7 @@ class Add_Recipe_Model extends Model {
 
         foreach($ingredients as $value){
             $sth = $this->db->prepare("call save_ingredient(:category_id, :name, :calories, :protein, :fat, :carbohydrates, :type, :dish_id, :quantity");
+            var_dump($value);
             $sth->execute(array(
                 ":category_id" => $value['category'],
                 ":name" => $value['name'],
@@ -47,7 +48,7 @@ class Add_Recipe_Model extends Model {
 
         echo "dodano danie o id=" . $current_dish_id;
 
-        $this->createIngredients($ingredients, $category_id, $name, $calories, $protein, $fat, $carbohydrates, $type, $current_dish_id, $quantity );
+        $this->createIngredients($ingredients, 0, 0, 0, 0, $current_dish_id );
 
 
     }
