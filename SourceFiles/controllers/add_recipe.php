@@ -21,10 +21,9 @@ class Add_Recipe extends Controller {
         $user_id = $this->view->user["id"];
 
 
-        $this->model->createRecipe($category, $name, $description, $time, $level, $ingredients, $user_id );
+        $dish_id = $this->model->createRecipe($category, $name, $description, $time, $level, $ingredients, $user_id );
 
-        echo "zrobione";
-       // header('location: ../recipe');
+       header('location: ../recipe?id=' . $dish_id);
 
     }
 }

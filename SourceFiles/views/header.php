@@ -33,7 +33,7 @@
 
             <!-- Logo -->
             <h1 id="logo"><a href="<?php echo SITE_ROOT; ?>index">ZJEDZ.ONE </a></h1>
-            <p>Witaj głodomorze! Nie wiesz co zjeść? Pomożemy Ci coś opierdolić na szybko.</p>
+            <p>Witaj głodomorze! Nie wiesz co zjeść? Pomożemy Ci.</p>
 
             <!-- Nav -->
             <nav id="nav">
@@ -52,11 +52,9 @@
                             <li><a href="#">Moje przepisy</a></li>
                             <li><a href="#">Zmień awatar</a></li>
                             <li>
-                                <a href="#">Phasellus consequat</a>
+                                <a href="#">Cos tu bedzie</a>
                                 <ul>
-                                    <li><a href="#">Magna phasellus</a></li>
-                                    <li><a href="#">Etiam dolore nisl</a></li>
-                                    <li><a href="#">Phasellus consequat</a></li>
+                                    <li><a href="#">Jakas opcja</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo SITE_ROOT; ?>new_password">Zmień hasło</a></li>
@@ -68,9 +66,5 @@
             </nav>
         </div
     </div>
-
-
-
-
 
 
