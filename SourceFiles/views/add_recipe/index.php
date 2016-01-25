@@ -11,7 +11,7 @@
                     <header>
                         <h2><a href="#">Dodaj Własny <strong>Przepis.</strong></a></h2>
                     </header>
-                    <form id="recipe-form"  method="post" action="add_recipe/run">
+                    <form id="recipe-form"  method="post" action="add_recipe/run" enctype="multipart/form-data">
                         <ul>
                             <li>Nazwa: <input class="recipe-name" name="name" required placeholder="Nazwa" type="text"></li>
                             <li>Kategoria:
@@ -43,7 +43,7 @@
                                 </select>
                             </li>
                             <li>Zdjecie:
-                                <input type="text">
+                                <input type="file" class="image-add-recipe" name="image">
                             </li>
                             <li>Opis przygotowania:
                                 <textarea name="recipe" required placeholder="Opis przygotowania"></textarea>

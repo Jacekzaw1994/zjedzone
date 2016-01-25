@@ -10,7 +10,7 @@
 
 								<!-- Feature -->
 									<section>
-										<a href="#" class="image featured"><img src="<?php echo SITE_ROOT; ?>public/images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="<?php if($this->fullRecipe['image_path'] == null){ echo SITE_ROOT . 'public/images/recipes_images/nophoto.jpg';}else{ echo $this->fullRecipe['image_path'];} ?>" alt="" /></a>
 										<header>
 											<h3>Składniki:</h3>
 
