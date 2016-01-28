@@ -32,7 +32,7 @@ class Add_Recipe extends Controller {
             {
                 die("This format is not allowed!");
             }else {
-                move_uploaded_file(SITE_ROOT, "public/images/recipes_images/" . $file_name);
+                move_uploaded_file($file_tmp, ROOT_DIR . "/public/images/recipes_images/" . $file_name);
                 $image_path = SITE_ROOT . "public/images/recipes_images/" . $file_name;
             }
         }

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jacek
- * Date: 2015-11-23
- * Time: 14:33
- */
 
 class Error extends Controller{
 
