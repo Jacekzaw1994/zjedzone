@@ -9,9 +9,9 @@ class Add_Recipe_Model extends Model {
 
     public function createRecipe( $category, $name, $image_path, $description, $time, $level, $ingredients, $user_id ) {
         $short_description = implode(" ", array_slice(explode(" ",$description), 0, 25)) . "...";
-        $sth = $this->db->prepare("select save_recipe( :category, :name, :image_path, :description, :short_description, :time, :level, :user_id) as id;");
+        $sth = $this->db->prepare("select save_recipe( :categorie, :name, :image_path, :description, :short_description, :time, :level, :user_id) as id;");
         $sth->execute(array(
-            ":category" => $category,
+            ":categorie" => $category,
             ":name" => $name,
             ":image_path" => $image_path,
             ":description" => $description,
@@ -35,7 +35,7 @@ class Add_Recipe_Model extends Model {
         foreach($ingredients as $value){
             $sth = $this->db->prepare("call save_ingredient(:category_id, :name, :calories, :protein, :fat, :carbohydrates, :type, :dish_id, :quantity);");
             $sth->execute(array(
-                ":category_id" => $value['category'],
+                ":category_id" => $value['categorie'],
                 ":name" => $value['name'],
                 ":calories" => $calories,
                 ":protein" => $protein,

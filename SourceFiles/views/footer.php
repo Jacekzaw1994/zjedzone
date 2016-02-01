@@ -1,8 +1,5 @@
 <!-- Footer -->
 <div id="footer-wrapper">
-    <div id="footer" class="container">
-
-    </div>
     <div id="copyright" class="container">
         <ul class="links">
             <li>&copy; Zjedz.one. Wszelkie prawa zastrzeżone.</li>

@@ -5,14 +5,16 @@ class Category_Model extends Model {
         parent::__construct();
     }
 
-    public function categoryObject() {
-        $sth = $this->db->prepare('call get_category();'); /// pobieranie kategorii
-        $sth->execute();
+    public function getRecipesByCategory($category){
 
-        $category = $sth->fetchAll();
+        $sth = $this->db->prepare('call get_recipe_list(:category);');
+        $sth->execute(array(
+            ':category' => $category
+        ));
 
-        var_dump($category);
-
-        return $category;
+        $recipes= $sth->fetchAll();
+        return $recipes;
     }
+
+
 }
