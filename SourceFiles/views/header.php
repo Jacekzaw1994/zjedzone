@@ -38,7 +38,9 @@
                 <ul>
                     <li><a class="icon fa-home" href="<?php echo SITE_ROOT; ?>index"><span>Strona główna</span></a></li>
                     <li><a class="icon fa-cog" href="<?php echo SITE_ROOT; ?>help"><span>Pomoc</span></a></li>
+                    <?php if($this->user):  ?>
                     <li><a class="icon fa-retweet" href="<?php echo SITE_ROOT; ?>add_recipe"><span>Dodaj przepis</span></a></li>
+                    <?php endif;?>
                     <?php if(!($this->user)):  ?>
                     <li><a class="icon fa-sitemap" href="<?php echo SITE_ROOT; ?>login"><span>Zaloguj</span></a></li>
                     <li><a class="icon fa-user" href="<?php echo SITE_ROOT; ?>register"><span>Zarejestruj</span></a> </li>

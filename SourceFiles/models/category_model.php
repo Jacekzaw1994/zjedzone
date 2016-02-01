@@ -6,7 +6,13 @@ class Category_Model extends Model {
     }
 
     public function categoryObject() {
-       // $sth = $this->db->prepare('call get_recipe(:dish_id);'); /// pobieranie kategorii
+        $sth = $this->db->prepare('call get_category();'); /// pobieranie kategorii
         $sth->execute();
+
+        $category = $sth->fetchAll();
+
+        var_dump($category);
+
+        return $category;
     }
 }

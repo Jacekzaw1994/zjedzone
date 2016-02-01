@@ -7,10 +7,8 @@ class Category extends Controller{
     }
 
     function index() {
+        $this->view->categories = $this->model->categoryObject();
         $this->view->render('category/index');
     }
 
-    function getCategory() {
-        return categoryObject();
-    }
 }
