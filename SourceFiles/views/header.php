@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/assets/css/main.css" />
     <link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/css/custom.css">
     <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo SITE_ROOT; ?>public/assets/css/ie8.css" /><![endif]-->
+
+    <!-- Information that javascript is disabled -->
+    <noscript>
+        Do pełnej funkcjonalności tej strony konieczne jest włączenie obsługi JavaScript.
+        Tutaj znajduje się link <a href="http://www.enable-javascript.com/" target="_blank">
+            z instrukcją jak włączyć obsługę JavaScript w Twojej przeglądarce.</a>.
+    </noscript>
 </head>
 <body class="homepage">
 <div id="page-wrapper">
@@ -38,6 +45,7 @@
                 <ul>
                     <li><a class="icon fa-home" href="<?php echo SITE_ROOT; ?>index"><span>Strona główna</span></a></li>
                     <li><a class="icon fa-cog" href="<?php echo SITE_ROOT; ?>help"><span>Pomoc</span></a></li>
+                    <li><a class="icon fa-cog" href="<?php echo SITE_ROOT; ?>categorie"><span>Przepisy</span></a></li>
                     <?php if($this->user):  ?>
                     <li><a class="icon fa-retweet" href="<?php echo SITE_ROOT; ?>add_recipe"><span>Dodaj przepis</span></a></li>
                     <?php endif;?>

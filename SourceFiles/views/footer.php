@@ -8,7 +8,13 @@
 </div>
 
 
+
 <!-- Scripts -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Ta strona wykorzystuje pliki cookie w celu poprawnego działania",
+        "dismiss":"Rozumiem","learnMore":"Info","link":null,"theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 <script src="<?php echo SITE_ROOT; ?>public/assets/js/jquery.min.js"></script>
 <script src="<?php echo SITE_ROOT; ?>public/assets/js/jquery.dropotron.min.js"></script>
 <script src="<?php echo SITE_ROOT; ?>public/assets/js/skel.min.js"></script>

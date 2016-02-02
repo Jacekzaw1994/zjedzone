@@ -27,8 +27,11 @@
                             </div>
                         </div>
                         <div class="row 50%">
-                            <div class="12u">
-                                <button type="submit" href="#" class="form-button-submit button icon fa-envelope">ZALOGUJ</button>
+                            <div class="6u">
+                                <button type="submit" href="#" class="form-button-submit button">ZALOGUJ</button>
+                            </div>
+                            <div class="6u register-option-container">
+                                <a href=" <?php echo SITE_ROOT . 'register';?>" class="register-login-page">REJESTRACJA</a>
                             </div>
                         </div>
                     </form>

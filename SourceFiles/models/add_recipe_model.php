@@ -9,9 +9,9 @@ class Add_Recipe_Model extends Model {
 
     public function createRecipe( $category, $name, $image_path, $description, $time, $level, $ingredients, $user_id ) {
         $short_description = implode(" ", array_slice(explode(" ",$description), 0, 25)) . "...";
-        $sth = $this->db->prepare("select save_recipe( :categorie, :name, :image_path, :description, :short_description, :time, :level, :user_id) as id;");
+        $sth = $this->db->prepare("select save_recipe( :category, :name, :image_path, :description, :short_description, :time, :level, :user_id) as id;");
         $sth->execute(array(
-            ":categorie" => $category,
+            ":category" => $category,
             ":name" => $name,
             ":image_path" => $image_path,
             ":description" => $description,

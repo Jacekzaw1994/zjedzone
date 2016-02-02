@@ -26,7 +26,7 @@ class Login extends Controller
             $random = rand(0,100000);
             setcookie("sessionId",$random, null, "/");
             $this->model->saveSessionId($userId, $random);
-            header('location: ../dashboard');
+            header('location: ../add_recipe');
             exit();
         }else{
             header("location: ../login");

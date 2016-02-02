@@ -8,7 +8,7 @@ $(document).ready(function(){
         var type = $("#ingredient-type").find(':selected').text();
         $('#list-ingredients').append('<li id="ingredient-' + countId + '" > ' + name + ' ' + quantity + ' ' + type + ' ' + '<a class="fa fa-times" href="#ingredient-' + countId + '"></a></li>');
         $('#recipe-form').append('<div id="ingredient-' + countId + '-input"><input type="hidden" name="ingredients[' + countId + '][name]" value="' + name +'">' +
-        '<input type="hidden" name="ingredients[' + countId + '][categorie]" value="' + category_id +'">' +
+        '<input type="hidden" name="ingredients[' + countId + '][category]" value="' + category_id +'">' +
         '<input type="hidden" name="ingredients[' + countId + '][quantity]" value="' + quantity +'">' +
         '<input type="hidden" name="ingredients[' + countId + '][type]" value="' + type +'"></div>');
 

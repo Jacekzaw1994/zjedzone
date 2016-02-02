@@ -12,7 +12,7 @@ class Add_Recipe extends Controller {
 
 
     function run() {
-        $category = $_POST['categorie'];
+        $category = $_POST['category'];
         $name = $_POST['name'];
         $time = $_POST['time'];
         $level = $_POST['level'];
