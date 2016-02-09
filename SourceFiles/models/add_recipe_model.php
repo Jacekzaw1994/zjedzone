@@ -35,7 +35,7 @@ class Add_Recipe_Model extends Model {
         foreach($ingredients as $value){
             $sth = $this->db->prepare("call save_ingredient(:category_id, :name, :calories, :protein, :fat, :carbohydrates, :type, :dish_id, :quantity);");
             $sth->execute(array(
-                ":category_id" => $value['categorie'],
+                ":category_id" => $value['category'],
                 ":name" => $value['name'],
                 ":calories" => $calories,
                 ":protein" => $protein,

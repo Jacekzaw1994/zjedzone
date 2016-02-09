@@ -9,7 +9,7 @@
 
                 <!-- Feature -->
                 <section>
-                    <a href="<?php echo SITE_ROOT . 'categorie' ?>" class="avatar-image image"><img src="<?php echo SITE_ROOT; ?>public/images/index_page/search.png" alt="" /></a>
+                    <a href="<?php echo SITE_ROOT . 'search' ?>" class="avatar-image image"><img src="<?php echo SITE_ROOT; ?>public/images/index_page/search.png" alt="" /></a>
                     <header>
                         <h3>Przejdz do wyszukiwarki</h3>
                     </header>

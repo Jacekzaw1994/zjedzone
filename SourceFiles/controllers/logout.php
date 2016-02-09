@@ -11,7 +11,7 @@ class Logout extends Controller
         $session = $_COOKIE['sessionId'];
         $this->session->deleteSession($session);
         setcookie("sessionId", "", time()-3600);
-        header("location: " . SITE_ROOT . "/index");
+        header("location: " . SITE_ROOT . "index");
     }
 
 }
