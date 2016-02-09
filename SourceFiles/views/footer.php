@@ -1,5 +1,8 @@
 <!-- Footer -->
 <div id="footer-wrapper">
+    <div>
+        Zalogowanych: <?php $variable = $this->loggedInUsers; echo $variable[0][0]; ?> użytkowników
+    </div>
     <div id="copyright" class="container">
         <ul class="links">
             <li>&copy; Zjedz.one. Wszelkie prawa zastrzeżone.</li>

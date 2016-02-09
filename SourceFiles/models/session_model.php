@@ -31,6 +31,14 @@ class Session_Model extends Model {
         $sth = $this->db->prepare("DELETE FROM users_sesions WHERE session_id = $session ");
         $sth->execute();
     }
+
+    function getNoLoggedInUsers(){
+        $sth = $this->db->prepare("SELECT * FROM loggedinusersview");
+        $sth->execute();
+
+        $result = $sth->fetchAll();
+        return $result;
+    }
 }
 
 ?>
