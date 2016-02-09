@@ -30,7 +30,7 @@
             </div>
         </div>
         <div id="search-result" class="row">
-            wynik tu bedzie!
+
         </div>
     </section>
 </div>

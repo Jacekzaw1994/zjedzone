@@ -31,7 +31,10 @@ $(document).ready(function(){
             success: function(res) {
                 console.dir(res);
                 for(var value in res){
-                    $('#search-result').append('<div class="4u 12u(mobile)"><p>' + res[value].name + res[value].level + res[value].time + res[value].user_id +'</p></div>');
+                    $('#search-result').append('<div class="3u 12u(mobile)">' +
+                                                    '<a href="#" class="avatar-image image"><img class="img" src="' +  res[value].image_path + '"></a>' +
+                                                    '<p>' + res[value].name + res[value].level + res[value].time + res[value].user_id +'</p>' +
+                                                '</div>');
                 }
             }
         });
