@@ -25,13 +25,22 @@ class Controller {
     }
 
     public function isLoggedIn() {
-        $session = $_COOKIE['sessionId'];
-        return $this->session->checkSession($session) != $session;
+        if(isset($_COOKIE['sessionId'])){
+            $session = $_COOKIE['sessionId'];
+            return $this->session->checkSession($session) != $session;
+        } else {
+            return 1;
+        }
+
     }
 
     public function getLoggedUser(){
-        $session = $_COOKIE['sessionId'];
-        return $this->session->getSessionUser($session);
+        if(isset($_COOKIE['sessionId'])){
+            $session = $_COOKIE['sessionId'];
+            return $this->session->getSessionUser($session);
+        } else {
+            return null;
+        }
     }
 
     public function getNumberOfLoggedIn(){

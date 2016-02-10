@@ -5,17 +5,13 @@
             <h2>Wybierz kategorie</h2>
         </header>
         <div class="row">
-                    <?php $i = 0; ?>
                     <?php foreach($this->categories as $value){ ?>
-                        <?php if($i++%3 == 0){ ?>
-                            <div class="6u 12u(mobile)">
-                                <ul class="category-view-list">
-                        <?php } ?>
-                                    <li><a href="<?php echo SITE_ROOT . 'category?id=' . $value['id']; ?>"><img src="<?php echo SITE_ROOT . 'public/images/categorie_icons/' . $value['id'] . '.png'; ?>" alt="<?php echo $value['name'] . ' image'; ?>"><strong><?php echo $value['name']; ?></strong></a> </li>
-                        <?php if($i%3 == 0){ ?>
-                                </ul>
+                            <div class="4u 12u(mobile)">
+                                <a href="<?php echo SITE_ROOT . 'category?id=' . $value['id']; ?>">
+                                    <img src="<?php echo SITE_ROOT . 'public/images/categorie_icons/' . $value['id'] . '.png'; ?>" class="avatar-image image" alt="<?php echo $value['name'] . ' image'; ?>">
+                                </a>
+                                <h3 class="recipes-categories-names"><?php echo $value['name']; ?></h3>
                             </div>
-                            <?php } ?>
                     <?php } ?>
         </div>
     </section>

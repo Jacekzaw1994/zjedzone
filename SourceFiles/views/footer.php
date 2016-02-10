@@ -1,7 +1,7 @@
 <!-- Footer -->
 <div id="footer-wrapper">
-    <div>
-        Zalogowanych: <?php $variable = $this->loggedInUsers; echo $variable[0][0]; ?> użytkowników
+    <div class="users-online">
+       <h3> Zalogowanych: <?php $variable = $this->loggedInUsers;  if($variable[0][0] == 1){ echo $variable[0][0] . " użytkownik.";} else{ echo $variable[0][0] . " użytkowników.";}; ?> </h3>
     </div>
     <div id="copyright" class="container">
         <ul class="links">

@@ -186,3 +186,12 @@ a:hover.tooltips span {
     border-radius: 20px;
     border: 1px solid #666;
 }
+
+.users-online {
+    margin-top: 10px;
+}
+
+.recipes-categories-names {
+    margin-top: 10px;
+    font-size: 1.6em;
+}
