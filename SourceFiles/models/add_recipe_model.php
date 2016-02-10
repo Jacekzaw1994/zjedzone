@@ -8,24 +8,39 @@ class Add_Recipe_Model extends Model {
 
 
     public function createRecipe( $category, $name, $image_path, $description, $time, $level, $ingredients, $user_id ) {
-        $short_description = implode(" ", array_slice(explode(" ",$description), 0, 25)) . "...";
-        $sth = $this->db->prepare("select save_recipe( :category, :name, :image_path, :description, :short_description, :time, :level, :user_id) as id;");
-        $sth->execute(array(
-            ":category" => $category,
-            ":name" => $name,
-            ":image_path" => $image_path,
-            ":description" => $description,
-            ":short_description" => $short_description,
-            ":time" => $time,
-            ":level" => $level,
-            ":user_id" => $user_id
-        ));
-        $result = $sth->setFetchMode(PDO::FETCH_ASSOC);;
-        $result = $sth->fetchAll();
-        $current_dish_id = $result[0]['id'];
-        $this->createIngredients($ingredients, 0, 0, 0, 0, $current_dish_id );
+        $this->db->beginTransaction();
+        try
+        {
+            $this->db->query("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED");
 
-        return $current_dish_id;
+            $short_description = implode(" ", array_slice(explode(" ", $description), 0, 25)) . "...";
+            $sth = $this->db->prepare("select save_recipe( :category, :name, :image_path, :description, :short_description, :time, :level, :user_id) as id;");
+            $sth->execute(array(
+                ":category" => $category,
+                ":name" => $name,
+                ":image_path" => $image_path,
+                ":description" => $description,
+                ":short_description" => $short_description,
+                ":time" => $time,
+                ":level" => $level,
+                ":user_id" => $user_id
+            ));
+            $result = $sth->setFetchMode(PDO::FETCH_ASSOC);;
+            $result = $sth->fetchAll();
+            $current_dish_id = $result[0]['id'];
+            $this->createIngredients($ingredients, 0, 0, 0, 0, $current_dish_id);
+
+            $this->db->commit();
+
+            return $current_dish_id;
+        }catch (PDOException $e)
+        {
+            $this->db->rollback();
+
+            return null;
+        }
+
+
 
     }
 

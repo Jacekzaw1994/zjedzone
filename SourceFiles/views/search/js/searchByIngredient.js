@@ -36,6 +36,9 @@ $(document).ready(function(){
                                                     '<p>' + res[value].name + res[value].level + res[value].time + res[value].user_id +'</p>' +
                                                 '</div>');
                 }
+            },
+            failure: function(){
+              alert("Wystąpił błąd podczas wyszukiwania przepisów.");
             }
         });
         return false;

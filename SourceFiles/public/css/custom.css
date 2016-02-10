@@ -1,8 +1,28 @@
 
 .avatar-image {
-    border-radius: 20px;
     margin-right: 20px;
     margin-bottom: -10px;
+}
+
+.user-avatar {
+    border-radius: 20px;
+}
+
+.recipe-page-avatar {
+    margin-left: 10px;
+}
+
+.recipe-rate a{
+    font-size: 2em;
+    border-bottom: none;
+}
+
+.user-rate-recipe {
+    float: right;
+}
+
+.user-rate-recipe p, ul{
+    margin-bottom: 0;
 }
 
 
@@ -223,4 +243,80 @@ a:hover.tooltips span {
 
 .page-number .selected {
     border-bottom: 3px solid #666666;
+}
+
+.add-recipe-btn{
+    margin-top: 300px;
+    position: absolute;
+}
+
+.image-add-recipe {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.add-ingredient-button{
+  margin-left: -50px;
+}
+
+
+#header-wrapper .recipe-prescrition p{
+    text-align: left;
+}
+
+#features-wrapper ul li {
+    text-align: left;
+}
+
+#features-wrapper ul.list-of-ingredients {
+    margin-left: 60px;
+}
+
+.second-star:hover {
+    .first-star {
+        color: #666666;
+    }
+}
+
+.favorites-btn {
+    border: 1px solid #666666;
+    background-color: #666666;
+    color: #FFFFFF;
+    padding-top: 0px;
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.favorites-btn:hover {
+    color: #FFFFFF;
+    background-color: #ED786A;
+    border: 1px solid #ED786A;
+}
+
+@media (min-width: 600px) and (max-width:800px){
+    .add-ingredient-button{
+        margin-left: 0px;
+    }
+
+    .add-recipe-btn{
+        margin-top: 200px;
+        position: absolute;
+    }
+
+}
+
+
+@media all and (max-width:600px) {
+    .add-ingredient-button{
+        margin-left: 0px;
+    }
+
+    .add-recipe-btn{
+        margin-top: 400px;
+        position: absolute;
+    }
 }

@@ -4,7 +4,7 @@
         <div class="row">
 
             <!-- Content -->
-            <div id="content" class="8u 12u(mobile)">
+            <div id="content" class="7u 12u(mobile)">
 
                 <!-- Post -->
                 <article class="box post">
@@ -48,7 +48,7 @@
                             <li>Opis przygotowania:
                                 <textarea name="recipe" required placeholder="Opis przygotowania"></textarea>
                             </li>
-                            <li><button type="submit" href="#" class="form-button-submit button icon fa-envelope">Dodaj Przepis</button></li>
+                            <li><button type="submit" href="#" class="add-recipe-btn form-button-submit button">Dodaj Przepis</button></li>
                         </ul>
                     </form>
                     <header>
@@ -88,7 +88,7 @@
                             <div class="hidden-inputs">
 
                             </div>
-                            <div class="2u 12(mobile)">
+                            <div  class="1u 12(mobile)">
                                 <button type="submit" href="#" class="form-button-submit button add-ingredient-button">Dodaj</button>
                             </div>
                         </div>
@@ -102,6 +102,10 @@
                         </div>
                     </div>
                 </article>
+
+            </div>
+
+            <div class="1u 12u(mobile)">
 
             </div>
 

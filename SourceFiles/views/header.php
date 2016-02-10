@@ -54,7 +54,7 @@
                     <li><a class="icon fa-user" href="<?php echo SITE_ROOT; ?>register"><span>Zarejestruj</span></a> </li>
                         <?php else:?>
                     <li>
-                        <a><img class="avatar-image" src="http://www.gravatar.com/avatar/<?php echo md5($this->user['email']);?>?s=30&d=retro"><span><strong><?php echo $this->user['username'];?></strong></span></a>
+                        <a><img class="avatar-image user-avatar" src="http://www.gravatar.com/avatar/<?php echo md5($this->user['email']);?>?s=30&d=retro"><span><strong><?php echo $this->user['username'];?></strong></span></a>
                         <ul>
                             <li><a href="http://www.gravatar.com/<?php echo md5($this->user['email']);?>">Zmień awatar</a></li>
                             <li>
