@@ -5,7 +5,7 @@
 // Set rootdir as SourceFiles
 define( 'ROOT_DIR',dirname(__FILE__));
 define( 'SITE_ROOT', 'http://localhost:80/zjedz/zjedz/SourceFiles/');
-define( 'LIBS', '/libs/');
+define( 'LIBS', '\libs\\');
 
 // Database
 

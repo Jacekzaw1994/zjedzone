@@ -7,7 +7,7 @@ class Error extends Controller{
     }
 
     function index() {
-        $this->view->msg = 'This page doesnt exist';
+        $this->view->msg = 'Ta strona nie istnieje! Sprawdż czy poprawnie wpisałeś adres.';
         $this->view->render('error/index');
     }
 }
