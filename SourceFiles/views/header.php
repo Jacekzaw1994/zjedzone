@@ -56,12 +56,12 @@
                     <li>
                         <a><img class="avatar-image" src="http://www.gravatar.com/avatar/<?php echo md5($this->user['email']);?>?s=30&d=retro"><span><strong><?php echo $this->user['username'];?></strong></span></a>
                         <ul>
-                            <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj przepis</a></li>
-                            <li><a href="#">Zmień awatar</a></li>
+                            <li><a href="http://www.gravatar.com/<?php echo md5($this->user['email']);?>">Zmień awatar</a></li>
                             <li>
                                 <a href="#">Przepisy</a>
                                 <ul>
-                                    <li><a href="#">Moje przepisy</a></li>
+                                    <li><a href="<?php echo SITE_ROOT; ?>my_recipes?id=<?php echo $this->user['id'];?>">Moje przepisy</a></li>
+                                    <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj przepis</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo SITE_ROOT; ?>new_password">Zmień hasło</a></li>
