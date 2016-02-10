@@ -18,11 +18,11 @@ class Recipe_Model extends Model {
         return $recipe;
     }
 
-    public function addFavorite($favorite, $user_id){
-        $sth = $this->db->prepare('call add_favorite(:favorite, :user_id);');
+    public function addFavorite($user_id, $favorite){
+        $sth = $this->db->prepare('call add_favorite(:user_id, :favorite);');
         $sth->execute(array(
-            ':favorite' => $favorite,
-            ':user_id' => $user_id
+            ':user_id' => $user_id,
+            ':favorite' => $favorite
         ));
     }
 
@@ -33,9 +33,8 @@ class Recipe_Model extends Model {
         ));
         $flag = 0;
         $favorites = $sth->fetchAll();
-        var_dump($favorites);
         foreach($favorites as $value){
-            if($dish_id == $value['id']){
+            if($dish_id == $value['dish_id']){
                 $flag = 1;
             }
         }

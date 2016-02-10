@@ -1,6 +1,6 @@
 <?php
 
-class My_Recipes extends Controller{
+class Favorites extends Controller{
 
     function __construct() {
         parent::__construct();
@@ -29,8 +29,8 @@ class My_Recipes extends Controller{
 
 
         /// Query
-//        $this->view->categoryDetails = $this->model->getCategory($user_id);
-        $this->view->recipesByUser = $this->model->getRecipesByCategory($user_id, $start, $perPage);
+        // $this->view->categoryDetails = $this->model->getCategory($user_id);
+        $this->view->recipesByUser = $this->model->getRecipesByFavorites($user_id, $start, $perPage);
         $this->view->render('my_recipes/index');
 
 

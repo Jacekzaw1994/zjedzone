@@ -61,6 +61,7 @@
                                 <a href="#">Przepisy</a>
                                 <ul>
                                     <li><a href="<?php echo SITE_ROOT; ?>my_recipes?id=<?php echo $this->user['id'];?>">Moje przepisy</a></li>
+                                    <li><a href="<?php echo SITE_ROOT; ?>favorites?id=<?php echo $this->user['id'];?>">Ulubione przepisy</a></li>
                                     <li><a href="<?php echo SITE_ROOT; ?>add_recipe">Dodaj przepis</a></li>
                                 </ul>
                             </li>

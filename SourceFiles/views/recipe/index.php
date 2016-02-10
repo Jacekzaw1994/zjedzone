@@ -11,8 +11,11 @@
                                 <a href="#"><i class="fourth-star fa fa-star"></i></a>
                                 <a href="#"><i class="fifth-star fa fa-star"></i></a>
                             </ul>
-                            <?php  ?>
-                            <a class="favorites-btn" href="recipe/addToFavorites?id=<?php echo $this->fullRecipe['id']; ?>" >Dodaj do ulubionych</a>
+                            <?php if($this->isFavorite){ ?>
+                                <p>Ten przepis jest polubiony przez Ciebie.</p>
+                            <?php }else{ ?>
+                                <a class="favorites-btn" href="recipe/addToFavorites?id=<?php echo $this->recipeId; ?>" >Dodaj do ulubionych</a>
+                            <?php } ?>
                         </div>
 
 						<div class="row">
