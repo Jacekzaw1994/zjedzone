@@ -29,6 +29,7 @@
 <script src="<?php echo SITE_ROOT; ?>views/register/js/checkLogin.js"></script>
 <script src="<?php echo SITE_ROOT; ?>views/add_recipe/js/addIngredient.js"></script>
 <script src="<?php echo SITE_ROOT; ?>views/search/js/searchByIngredient.js"></script>
+<script src="<?php echo SITE_ROOT; ?>views/recipe/js/starsShine.js"></script>
 
 <?php
 if(isset($this->js))

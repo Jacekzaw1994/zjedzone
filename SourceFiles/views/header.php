@@ -38,7 +38,7 @@
 
             <!-- Logo -->
             <h1 id="logo"><a href="<?php echo SITE_ROOT; ?>index">ZJEDZ.ONE </a></h1>
-            <p>Witaj głodomorze! Nie wiesz co zjeść? Pomożemy Ci.</p>
+            <p><strong>Witaj głodomorze!</strong> Nie wiesz co zjeść? Dobrze trafiłeś.</p>
 
             <!-- Nav -->
             <nav id="nav">

@@ -122,7 +122,7 @@
                                 <header>
                                     <h3><a href="#">Jak dodać przepis</a></h3>
                                 </header>
-                                <ul>
+                                <ul class="instruction">
                                     <li><i class="fa fa-check"></i><strong>Nazwa:</strong> jest to pole na wpisanie tytułu przepisu, np. Kurczak z cynamonem.</li>
                                     <li><i class="fa fa-check"></i><strong>Kategoria:</strong> wybierz z listy kategorię najlepiej pasującą do dodawanego przepisu.</li>
                                     <li><i class="fa fa-check"></i><strong>Czas przygotowania:</strong> podaj łączny czas niezbędny do przygotowania potrawy, uwzględnij czynności przygotowawcze, ale również czas "leżakowania", np. marynowania, namaczania, etc.</li>

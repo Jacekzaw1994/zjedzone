@@ -272,10 +272,18 @@ a:hover.tooltips span {
     margin-left: 60px;
 }
 
-.second-star:hover {
-    .first-star {
-        color: #666666;
-    }
+
+.star-shine {
+    color: #ED786A;
+    transition: box-shadow 0.5s;
+}
+
+#header-wrapper .instruction li {
+    text-align: left;
+}
+
+#header-wrapper .instruction li strong {
+    font-size: 1.2em;
 }
 
 .favorites-btn {
